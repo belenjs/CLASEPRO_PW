@@ -1,3 +1,5 @@
+package model;
+
 public class Operaciones {
 
     public void sumar(int num1, int num2){
