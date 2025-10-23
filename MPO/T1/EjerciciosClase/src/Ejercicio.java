@@ -58,6 +58,24 @@ public class Ejercicio {
     Compra: 266,47€
     IVA: 31,98€
     */
+        lectorTeclado = new Scanner(System.in);
+        // 1 -> introducir datos (compra con iva)
+        System.out.println("¿Cuánto costó en total la compra?");
+        double compraTotal = lectorTeclado.nextDouble();
+        System.out.println("¿Cuál fue el porcentaje del IVA?");
+        int porcentajeIva = lectorTeclado.nextInt();
+
+        // 2 -> calculos (compra sin iva, cuanto fue el iva)
+        double compra = compraTotal/(1+(porcentajeIva/100.0));
+        double cantidadIva = compraTotal - compra;
+
+        // 3 -> mostrar datos
+        System.out.println("El valor de la compra: "+compraTotal);
+        System.out.println("IVA: "+porcentajeIva);
+        System.out.printf("Compra sin IVA: %.2f%n", compra);
+        System.out.printf("IVA en euros: %.2f%n", cantidadIva);
+
+
     }
 
     public void ejercicio3(){
@@ -70,12 +88,33 @@ public class Ejercicio {
     Decenas: 5
     Unidades: 0
     */
+        lectorTeclado = new Scanner(System.in);
+        // 1 -> Pedir el número
+        System.out.println("¿Cúal es el número a convertir?");
+        int number = lectorTeclado.nextInt();
+
+        // 2 -> hacer los cálculos para sacare las decenas de mil, unidades de mil, centenas, decenas y unidades.
+        int decenasMil = (number/10000)%10;
+        int unidadesMil = (number/1000)%10;
+        int centenas = (number/100)%10;
+        int decenas = (number/10)%10;
+        int unidades = number%10;
+
+        // 3 -> mostrar todos los números
+        System.out.println("Decenas de mil: "+decenasMil);
+        System.out.println("Unidades de mil: "+unidadesMil);
+        System.out.println("Centenas de mil: "+centenas);
+        System.out.println("Decenas de mil: "+decenas);
+        System.out.println("Unidades de mil: "+unidades);
+        System.out.println("El numero introducido es: "+number);
+
+
     }
 
     public void ejercicio4(){
-        /*
-        Hágase un programa que convierta segundos en horas, minutos y segundos.
-        */
+
+        //Hágase un programa que convierta segundos en horas, minutos y segundos.
+
         // 1 -> pedir datos
         lectorTeclado = new Scanner(System.in);
         System.out.println("¿Cúantos segundos quieres convertir?");
