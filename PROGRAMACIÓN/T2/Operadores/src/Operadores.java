@@ -80,5 +80,25 @@ public class Operadores {
     }
 
 
+    public void cambiosTipo(){
+        //int letraASCII = 75;
+        //char letra = 'w';
+        //System.out.println((int)letra);
+
+        //String palabra = "7";
+        //System.out.println(Integer.parseInt(palabra));
+
+        //String palabra = "si"; // da false, si puede hacer el cambio a true dará true, sino, siempre false.
+        //System.out.println(Boolean.parseBoolean(palabra));
+
+        //int numero = 123;
+       // System.out.println(String.valueOf(123));
+
+        //boolean cierto = true;
+        //System.out.println(String.valueOf(cierto));
+
+    }
+
+
 }
 
