@@ -80,16 +80,16 @@ public class EstructuraSwitch {
     }
 
 
-    public void menuOpciones(){
+    public void menuOperaciones(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Por favor selecciona la opción a realizar");
         System.out.println("1 - Sumar");
         System.out.println("2 - Restar");
         System.out.println("3 - Multiplicar");
         System.out.println("4 - División");
-        System.out.println("5 - Sumar");
-        System.out.println("6 - Sumar");
-        System.out.println();
+        System.out.println("5 - Modular");
+        System.out.println("6 - Salir");
+        System.out.println("¿Qué quieres hacer?");
         int opcion = scanner.nextInt();
         int operando1=0, operando2=0;
 
@@ -115,19 +115,22 @@ public class EstructuraSwitch {
             }
             case 4 ->{
                 System.out.println("Vas a dividir");
-                resultado = (double)operando1/operando2;
+                if (operando2 != 0){
+                    resultado = (double) operando1 / operando2;
+                }
+
             }
             case 5 ->{
-                System.out.println("Vas a dividir");
-                resultado = (double)operando1/operando2;
+                System.out.println("Vas a modular");
+                resultado = operando1 % operando2;
             }
             case 6 ->{
-                System.out.println("Vas a dividir");
-                resultado = (double)operando1/operando2;
+                System.out.println("Saliendo");
             }
             default -> {
-                System.out.println("El resultado obtenido es "+resultado);
+                System.out.println("Opción no contemplada");
             }
         }
+        System.out.println("El resultado obtenido es "+resultado);
     }
 }

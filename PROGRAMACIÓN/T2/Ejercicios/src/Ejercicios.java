@@ -22,7 +22,7 @@ public class Ejercicios {
                 || pass.contains("3") || pass.contains("4") || pass.contains("5") || pass.contains("6")
                 || pass.contains("7") || pass.contains("9") || pass.contains("8") || pass.contains("0");
         System.out.println("La pass contiene al menos un número "+contieneNumero);
-        boolean passValida = nCaracteres && esValida &&
+        boolean passValida = nCaracteres && esValida;
     }
 
     public void ejercicio13(){
@@ -44,7 +44,7 @@ public class Ejercicios {
         int calculoEntrada = 0;
         if (edad<12){
             calculoEntrada = 0;
-        } else if (edad<17 &&) {
+        } else if (edad<17) {
             if (dia == 2) {
                 calculoEntrada = 0;
             } else {
@@ -60,10 +60,23 @@ public class Ejercicios {
             calculoEntrada = 6;
         }
 
-        if (){
-
+        String diaSemana = "";
+        if (dia == 1){
+            diaSemana ="Lunes";
+        } else if (dia == 2) {
+            diaSemana ="Martes";
+        } else if (dia == 3) {
+            diaSemana = "Miércoles";
+        } else if (dia == 4) {
+            diaSemana = "Jueves";
+        } else if (dia == 5) {
+            diaSemana = "Viernes";
+        } else if (dia == 6) {
+            diaSemana = "Sábado";
+        } else if (dia == 7) {
+            diaSemana = "Domingo";
         }
 
-        System.out.println("La entrada para la edad indicada es "+calculoEntrada);
+        System.out.println("La entrada para la edad indicada es "+calculoEntrada+ "para el día "+diaSemana);
     }
 }
